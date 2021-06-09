@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb55adfe0d9c864489273d705423073a, type: 3}
   m_Name: Hero1
   m_EditorClassIdentifier: 
-  Hp: 100
-  icon: {fileID: 0}
+  HP: 6
+  Attack: 2
+  icon_field: {fileID: 21300000, guid: 0f12935018470f54db00aa2d654604e6, type: 3}
+  icon_deck: {fileID: 21300000, guid: 20970c5716051974a866329fbf0a98b5, type: 3}
+  cost: 0
+  cur_HP: 6
