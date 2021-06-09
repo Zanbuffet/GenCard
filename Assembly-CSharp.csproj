@@ -49,12 +49,12 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Card.cs" />
      <Compile Include="Assets\Script\Inventory.cs" />
-     <Compile Include="Assets\Script\BattleField.cs" />
-     <Compile Include="Assets\Script\BattleManager.cs" />
      <Compile Include="Assets\Script\Card_Field.cs" />
-     <Compile Include="Assets\Script\Card_Group.cs" />
      <Compile Include="Assets\Script\UIManager.cs" />
+     <Compile Include="Assets\Script\BattleManager.cs" />
+     <Compile Include="Assets\Script\BattleField.cs" />
      <Compile Include="Assets\Script\BattleUnit.cs" />
+     <Compile Include="Assets\Script\Card_Group.cs" />
      <Compile Include="Assets\Script\Turner.cs" />
  <Reference Include="UnityEngine">
  <HintPath>I:/unity/2020.3.7f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
