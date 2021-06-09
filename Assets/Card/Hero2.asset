@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Hero2
   m_EditorClassIdentifier: 
   HP: 5
-  icon_field: {fileID: 21300000, guid: 0f12935018470f54db00aa2d654604e6, type: 3}
-  icon_deck: {fileID: 21300000, guid: 20970c5716051974a866329fbf0a98b5, type: 3}
-  cost: 2
+  Attack: 3
+  icon_field: {fileID: 21300000, guid: 7284e092c93732740a0ced0e5690cccb, type: 3}
+  icon_deck: {fileID: 21300000, guid: 9aab3601021692542b5ce8dba0539bbb, type: 3}
+  cost: 0
   cur_HP: 5
