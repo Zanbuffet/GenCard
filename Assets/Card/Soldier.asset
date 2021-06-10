@@ -18,5 +18,5 @@ MonoBehaviour:
   Attack: 2
   cost: 1
   element: 3
-  icon_field: {fileID: 21300000, guid: 4a7b872e93a05784e89a35a100efb6b9, type: 3}
-  icon_deck: {fileID: 21300000, guid: 2d9bd71e086aae54cbd4d716f3a2ebcd, type: 3}
+  icon_field: {fileID: 21300000, guid: 9cf5eecd5d9656e418b6845d3cc0c9fa, type: 3}
+  icon_deck: {fileID: 21300000, guid: 9cf5eecd5d9656e418b6845d3cc0c9fa, type: 3}

@@ -23,6 +23,7 @@ public class TurnManager : MonoBehaviour
         GameObject.Find("Turner_Player1").GetComponent<Turner1>().statement=true;
         GameObject.Find("Turner_Player2").GetComponent<Turner2>().isChanged=true;
         GameObject.Find("Turner_Player1").GetComponent<Image>().sprite=On;
+        cur_turn=false;
     }
     public void Switch_Turn_to_P2(bool statement){
         if(GameObject.Find("Turner_Player2").GetComponent<Turner2>().isChanged==true){
@@ -36,6 +37,8 @@ public class TurnManager : MonoBehaviour
         return ;
         }
         Debug.Log("Fight!");
+        GameObject.Find("Turner_Player2").GetComponent<Image>().sprite=Off;
+        Instantiate(cover1, GameObject.Find("Canvas").transform);
         GameObject.Find("FightManager").GetComponent<FightManager>().FightButton();
         // GameObject.Find("Turner_Player2").GetComponent<Turner2>().skip=true;
         // GameObject.Find("Turner_Player1").GetComponent<Turner1>().statement=true;
@@ -55,6 +58,8 @@ public class TurnManager : MonoBehaviour
         return ;
         }
         Debug.Log("Fight!");
+        GameObject.Find("Turner_Player1").GetComponent<Image>().sprite=Off;
+        Instantiate(cover2, GameObject.Find("Canvas").transform);
         GameObject.Find("FightManager").GetComponent<FightManager>().FightButton();
         // GameObject.Find("Turner_Player1").GetComponent<Turner1>().skip=true;
         // GameObject.Find("Turner_Player2").GetComponent<Turner2>().statement=true;

@@ -9,13 +9,13 @@ public class FightManager : MonoBehaviour
     public List<GameObject> slots = new List<GameObject>();     //temp
     public GameObject P1Base;
     public GameObject P2Base;
-
     private void OnEnable()
     {
         Card_Field.onCardDeath += RemoveFromQueue;
     }
     public void InitFighting()
-    {
+    {   
+        fightQueue.Clear();
         foreach (var slot in slots)
         {
             Card card = slot.GetComponent<Card_Field>().cardinfo;
@@ -96,7 +96,7 @@ public class FightManager : MonoBehaviour
             if (fightQueue.ContainsKey(idx - 1))
             {
                 //Card card = fightQueue[idx + 1];
-                targets.Add(slots[idx + 1]);
+                targets.Add(slots[idx-1]);
             }
         }
         return targets;
@@ -116,9 +116,13 @@ public class FightManager : MonoBehaviour
     }
     public void FightButton()
     {
+        StartCoroutine(StillFighting());
+    }
+    IEnumerator StillFighting()
+    {
         InitFighting();
-        Debug.Log("FightInit!");
-        StartCoroutine(Fighting());
+        yield return StartCoroutine(Fighting());
+        Debug.Log("FightEnds");
         GameObject.Find("TurnManager").GetComponent<TurnManager>().InitTurn();
     }
 }
