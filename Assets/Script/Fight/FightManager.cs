@@ -7,7 +7,13 @@ public class FightManager : MonoBehaviour
     //public List<Card> fightQueue = new List<Card>();
     public Dictionary<int, Card> fightQueue = new Dictionary<int, Card>();
     public List<GameObject> slots = new List<GameObject>();     //temp
-    public GameObject enemyBase;
+    public GameObject P1Base;
+    public GameObject P2Base;
+
+    private void OnEnable()
+    {
+        Card_Field.onCardDeath += RemoveFromQueue;
+    }
     public void InitFighting()
     {
         foreach (var slot in slots)
@@ -24,28 +30,34 @@ public class FightManager : MonoBehaviour
     IEnumerator Fighting()
     {
         Debug.Log("WhynotFight!");
-        foreach (var card in fightQueue)
+        foreach (var slot in slots)
         {
-            //temp effect
-            slots[card.Key].GetComponent<Image>().color = Color.green;
-            GameObject[] targets = GetTargets(card.Key).ToArray();
-            foreach (var tar in targets)
+            Card card = slot.GetComponent<Card_Field>().cardinfo;
+            if (card != null)
             {
-                Debug.Log("Card " + card + "Attack " + tar.name + "  Damage: " + card.Value.HP);
-                Card_Field targetCard = tar.GetComponent<Card_Field>();
-                if (targetCard != null)
+                slot.GetComponent<Image>().color = Color.green;
+                GameObject[] targets = GetTargets(slot.GetComponent<Card_Field>().idx).ToArray();
+                foreach (var tar in targets)
                 {
-                    targetCard.TakeDamage(card.Value.Attack);
+                    Debug.Log("Card " + card + "Attack " + tar.name + "  Damage: " + card.Attack);
+                    Card_Field targetCard = tar.GetComponent<Card_Field>();
+                    if (targetCard != null)
+                    {
+                        targetCard.TakeDamage(card.Attack);
+                    }
+                    else
+                        BaseAttack(tar, card.Attack);
                 }
-
+                yield return new WaitForSeconds(2f);
+                slot.GetComponent<Image>().color = Color.white;
             }
-            //CardFight(fightQueue[i]);
-            yield return new WaitForSeconds(2f);
-            slots[card.Key].GetComponent<Image>().color = Color.white;
         }
     }
 
-
+    private void BaseAttack(GameObject tar, int damage)
+    {
+        tar.GetComponent<Base>().BaseTakeDamage(damage);
+    }
     private List<GameObject> GetTargets(int idx)
     {
         List<GameObject> targets = new List<GameObject>();
@@ -63,11 +75,38 @@ public class FightManager : MonoBehaviour
             }
             if (targets.Count < 2)
             {
-                targets.Add(enemyBase);
+                if (idx % 2 == 0)
+                {
+                    targets.Add(P2Base);
+                }
+                else
+                    targets.Add(P1Base);
+            }
+        }
+        else if (idx == 0)
+        {
+            if (fightQueue.ContainsKey(idx + 1))
+            {
+                //Card card = fightQueue[idx + 1];
+                targets.Add(slots[idx + 1]);
+            }
+        }
+        else
+        {
+            if (fightQueue.ContainsKey(idx - 1))
+            {
+                //Card card = fightQueue[idx + 1];
+                targets.Add(slots[idx + 1]);
             }
         }
         return targets;
 
+    }
+
+    public void RemoveFromQueue(int idx)
+    {
+        Debug.Log("REMOVE IT");
+        fightQueue.Remove(idx);
     }
     public void InitButton()
     {
