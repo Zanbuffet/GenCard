@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637589327063724959
-    m_Hash: 3484380970
+      ticks: 637589418990069672
+    m_Hash: 2111087172
   m_LockFileStatus:
     m_FilePath: D:/Fork/GenCard/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637589327064313384
-    m_Hash: 2804229579
+      ticks: 637589418990079647
+    m_Hash: 897431974
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
