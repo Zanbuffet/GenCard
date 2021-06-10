@@ -64,6 +64,12 @@ public class UIManager : MonoBehaviour
 
             // remove from inventory
             inventory.cards.RemoveAt(inventory.cur_card);
+            inventory.cur_card=-1;
+            if(GameObject.Find("TurnManager").GetComponent<TurnManager>().cur_turn==false){
+                GameObject.Find("Turner_Player1").GetComponent<Turner1>().isChanged=true;
+            }else if(GameObject.Find("TurnManager").GetComponent<TurnManager>().cur_turn==true){
+                GameObject.Find("Turner_Player2").GetComponent<Turner2>().isChanged=true;
+            }
             inventory.dirty_=true;
         }
 

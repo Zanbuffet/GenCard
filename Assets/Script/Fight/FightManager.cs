@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class FighManager : MonoBehaviour
+public class FightManager : MonoBehaviour
 {
     //public List<Card> fightQueue = new List<Card>();
     public Dictionary<int, Card> fightQueue = new Dictionary<int, Card>();
@@ -23,6 +23,7 @@ public class FighManager : MonoBehaviour
 
     IEnumerator Fighting()
     {
+        Debug.Log("WhynotFight!");
         foreach (var card in fightQueue)
         {
             //temp effect
@@ -77,6 +78,8 @@ public class FighManager : MonoBehaviour
     public void FightButton()
     {
         InitFighting();
+        Debug.Log("FightInit!");
         StartCoroutine(Fighting());
+        GameObject.Find("TurnManager").GetComponent<TurnManager>().InitTurn();
     }
 }
