@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb55adfe0d9c864489273d705423073a, type: 3}
-  m_Name: Hero2
+  m_Name: Soldier
   m_EditorClassIdentifier: 
-  name: Mona
-  HP: 36
-  cur_HP: 36
-  Attack: 10
-  cost: 4
-  element: 1
-  icon_field: {fileID: 21300000, guid: 7284e092c93732740a0ced0e5690cccb, type: 3}
-  icon_deck: {fileID: 21300000, guid: 9aab3601021692542b5ce8dba0539bbb, type: 3}
+  name: Worriar
+  HP: 12
+  cur_HP: 12
+  Attack: 2
+  cost: 1
+  element: 3
+  icon_field: {fileID: 21300000, guid: 4a7b872e93a05784e89a35a100efb6b9, type: 3}
+  icon_deck: {fileID: 21300000, guid: 2d9bd71e086aae54cbd4d716f3a2ebcd, type: 3}

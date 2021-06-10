@@ -7,7 +7,6 @@ public class Card_Field : MonoBehaviour
 {
     public Card cardinfo;
     public int idx;
-
     private int currentHP;
 
     public void RefreshCard(Card cardinfo_)

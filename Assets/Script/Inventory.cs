@@ -30,11 +30,9 @@ public class Inventory : MonoBehaviour
     [SerializeField] public List<Card> Example_cards = new List<Card>();
     public int cur_card = -1;
     public GameObject Prefab_Button;
-
     public bool dirty_=false;
-
     private void Start() {
-       cards=Example_cards;
+        cards=Example_cards;
     }
     public void Select_card()
     {

@@ -35,11 +35,13 @@ public class Card_Group : MonoBehaviour
     private Vector3 originalPos;
     public  Vector3 distance;
     public float moveSpeed;
+    private TurnManager turnManager;
     private void Start() {
         containerTransform = transform.Find("Container").GetComponent<RectTransform>();
         originalPos = containerTransform.localPosition;
         deckTransform = transform.parent.GetComponent<HorizontalLayoutGroup>();
         originalSpacing = deckTransform.spacing;
+        turnManager=GameObject.Find("TurnManager").GetComponent<TurnManager>();
     }
     public void Update(){
         if(isHover){

@@ -23,7 +23,6 @@ public class FightManager : MonoBehaviour
 
     IEnumerator Fighting()
     {
-        Debug.Log("WhynotFight!");
         foreach (var card in fightQueue)
         {
             //temp effect
