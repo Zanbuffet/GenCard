@@ -58,7 +58,7 @@ public class FightManager : MonoBehaviour
 
     private void BaseAttack(GameObject tar, int damage)
     {
-        tar.GetComponent<Base>().BaseTakeDamage(damage);
+        tar.GetComponent<PlayerBase>().BaseTakeDamage(damage);
     }
     private List<GameObject> GetTargets(int idx)
     {

@@ -40,12 +40,12 @@ public class Card_Field : MonoBehaviour
         //if (currentHP <= 0 && onCardDeath != null)
         //onCardDeath.Invoke();
 
-        StartCoroutine(TakingDamage(elementType,damage));
+        StartCoroutine(TakingDamage(elementType, damage));
     }
 
 
 
-    IEnumerator TakingDamage(Element elementType,int damage)
+    IEnumerator TakingDamage(Element elementType, int damage)
     {
         yield return new WaitForSeconds(1f);
         battleEffect.AddElement(elementType);
@@ -78,6 +78,8 @@ public class Card_Field : MonoBehaviour
         {
             cardinfo = null;
             transform.Find("Image").GetComponent<Image>().sprite = null;
+            transform.Find("HP").GetComponent<Text>().text = "";
+            transform.Find("Attack").GetComponent<Text>().text = "";
         }
     }
 

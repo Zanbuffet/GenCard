@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class Base : MonoBehaviour
+public class PlayerBase : MonoBehaviour
 {
     [SerializeField] private int baseHP = 40;
     [SerializeField] public int baseCost = 8;

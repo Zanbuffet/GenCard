@@ -5,7 +5,7 @@ using UnityEngine;
 public class BattleUnit : Card
 {
     //init
-    public int cur_HP=0;
+    public int cur_HP_=0;
     public void InitFromCard(Card card_info){
         cur_HP=card_info.HP;
         this.HP=cur_HP;
