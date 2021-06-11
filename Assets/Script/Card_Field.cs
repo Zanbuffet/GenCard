@@ -35,23 +35,26 @@ public class Card_Field : MonoBehaviour
 
     public void TakeDamage(Element elementType, int damage)
     {
-        battleEffect.AddElement(elementType);
-        int additionalDamage = battleEffect.ElementDamage(damage);
-        currentHP -= additionalDamage;
-        UpdateCard();
+
+
         //if (currentHP <= 0 && onCardDeath != null)
         //onCardDeath.Invoke();
 
-        StartCoroutine(TakingDamage(additionalDamage));
+        StartCoroutine(TakingDamage(elementType,damage));
     }
 
 
 
-    IEnumerator TakingDamage(int damage)
+    IEnumerator TakingDamage(Element elementType,int damage)
     {
-        GetComponent<Image>().color = Color.red;
-        battleEffect.DisplayDamage(damage);
         yield return new WaitForSeconds(1f);
+        battleEffect.AddElement(elementType);
+        int additionalDamage = battleEffect.ElementDamage(damage);
+        currentHP -= additionalDamage;
+        UpdateCard();
+        battleEffect.DisplayDamage(additionalDamage);
+
+        yield return new WaitForSeconds(0.6f);
         battleEffect.DisplayDamage(0);
         GetComponent<Image>().color = Color.white;
         if (currentHP <= 0 && onCardDeath != null)
