@@ -43,7 +43,7 @@ public class FightManager : MonoBehaviour
                     Card_Field targetCard = tar.GetComponent<Card_Field>();
                     if (targetCard != null)
                     {
-                        targetCard.TakeDamage(card.Attack);
+                        targetCard.TakeDamage(card.element,card.Attack);
                     }
                     else
                         BaseAttack(tar, card.Attack);

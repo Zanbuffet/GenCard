@@ -9,8 +9,8 @@ public class Card_Field : MonoBehaviour
     public static CardDeath onCardDeath;
     public Card cardinfo;
     public int idx;
-
     private BattleEffects battleEffects;
+    private ElementEffect elementEffect;
     private int currentHP;
 
     private void OnEnable()
@@ -20,7 +20,7 @@ public class Card_Field : MonoBehaviour
     private void Start()
     {
         battleEffects = GetComponent<BattleEffects>();
-
+        elementEffect = GetComponent<ElementEffect>();
     }
 
 
@@ -28,15 +28,17 @@ public class Card_Field : MonoBehaviour
     {
         cardinfo = cardinfo_;
         Debug.Log("Card Added! " + cardinfo.HP);
-        currentHP = cardinfo.cur_HP;
-        transform.Find("HP").GetComponent<Text>().text = "" + cardinfo.cur_HP;
+        currentHP = cardinfo.HP;
+        transform.Find("HP").GetComponent<Text>().text = "" + currentHP;
+        transform.Find("Attack").GetComponent<Text>().text = "" + cardinfo.Attack;
         transform.Find("Image").GetComponent<Image>().sprite = cardinfo.icon_field;
 
 
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(Element elementType, int damage)
     {
+        elementEffect.AddElement(elementType);
         currentHP -= damage;
         UpdateCard();
         //if (currentHP <= 0 && onCardDeath != null)
@@ -44,6 +46,8 @@ public class Card_Field : MonoBehaviour
 
         StartCoroutine(TakingDamage(damage));
     }
+
+
 
     IEnumerator TakingDamage(int damage)
     {
