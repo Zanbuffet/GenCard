@@ -922,8 +922,10 @@ MonoBehaviour:
   Off: {fileID: 21300000, guid: f3bf6d6c98dc62c41981fa8e15ba158a, type: 3}
   cover1: {fileID: 5534786075069274114, guid: fa5e71d3df9448d4383b7de6d92a607d, type: 3}
   cover2: {fileID: 3644371868411550283, guid: cb85471dc200b764bb97324e9c085d7e, type: 3}
+  fillCard: 0
   nextPhase: 0
   cur_turn: 0
+  round2: 0
 --- !u!1 &867997521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1601,7 @@ MonoBehaviour:
   cardDeck_player_1: {fileID: 481157972}
   cardDeck_player_2: {fileID: 1213022292}
   card_prefab: {fileID: 5659316581478077992, guid: 685ba4907ae549941858209b15dbf657, type: 3}
+  card_fill: {fileID: 5659316581478077992, guid: 685ba4907ae549941858209b15dbf657, type: 3}
   battleSlots:
   - {fileID: 1216510400}
   - {fileID: 703264482}
@@ -1770,6 +1773,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e20d2618abf75546b701cc4cd2f28db, type: 2}
   - {fileID: 11400000, guid: 5caa4ae97c7e96748a453edb6c10c550, type: 2}
   - {fileID: 11400000, guid: e01ceb570cfbc7442ba62abb6438389f, type: 2}
+  - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   cur_card: -1
@@ -2403,6 +2407,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e20d2618abf75546b701cc4cd2f28db, type: 2}
   - {fileID: 11400000, guid: 5caa4ae97c7e96748a453edb6c10c550, type: 2}
   - {fileID: 11400000, guid: e01ceb570cfbc7442ba62abb6438389f, type: 2}
+  - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   - {fileID: 11400000, guid: 7b3c4e23001df4f4f8fdab48a6bdc761, type: 2}
   cur_card: -1

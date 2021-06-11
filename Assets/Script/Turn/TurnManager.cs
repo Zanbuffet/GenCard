@@ -10,8 +10,10 @@ public class TurnManager : MonoBehaviour
     public Sprite Off;
     public GameObject cover1;
     public GameObject cover2;
+    public bool fillCard=false;
     public bool nextPhase=false;
     public bool cur_turn=false;//false stands for P1.
+    public bool round2=false;
     void Start() {
 //    GameObject cover1_=Instantiate(cover1, GameObject.Find("Canvas").transform);
     Instantiate(cover2, GameObject.Find("Canvas").transform);
@@ -23,7 +25,9 @@ public class TurnManager : MonoBehaviour
         GameObject.Find("Turner_Player1").GetComponent<Turner1>().statement=true;
         GameObject.Find("Turner_Player2").GetComponent<Turner2>().isChanged=true;
         GameObject.Find("Turner_Player1").GetComponent<Image>().sprite=On;
+        fillCard=true;
         cur_turn=false;
+        round2=true;
     }
     public void Switch_Turn_to_P2(bool statement){
         if(GameObject.Find("Turner_Player2").GetComponent<Turner2>().isChanged==true){
