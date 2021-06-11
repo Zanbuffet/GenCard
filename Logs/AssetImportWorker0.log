@@ -826,3 +826,115 @@ System memory in use after: 86.2 MB.
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2403.
 Total: 1.910700 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.078100 ms MarkObjects: 1.580500 ms  DeleteObjects: 0.017100 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001086 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.689 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2407.
+Total: 1.898000 ms (FindLiveObjects: 0.208000 ms CreateObjectMapping: 0.071300 ms MarkObjects: 1.602300 ms  DeleteObjects: 0.015000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000611 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.682 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2411.
+Total: 1.949300 ms (FindLiveObjects: 0.181400 ms CreateObjectMapping: 0.063500 ms MarkObjects: 1.691800 ms  DeleteObjects: 0.011900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2006.468308 seconds.
+  path: Assets/Effects/Vaporize2.asset
+  artifactKey: Guid(5998aa3c5a543f541a2f6357de22104f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Vaporize2.asset using Guid(5998aa3c5a543f541a2f6357de22104f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00e336fb2fa3119ff406361350e6ddc7') in 0.013946 seconds
+  Import took 0.017637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Effects/Vaporize1.5.asset
+  artifactKey: Guid(4a9f0b217cfc7144a9b84bc81a598927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Vaporize1.5.asset using Guid(4a9f0b217cfc7144a9b84bc81a598927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a81125c98ef638f466e74963f76dff5') in 0.006154 seconds
+  Import took 0.024943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Effects/Melt1.5.asset
+  artifactKey: Guid(852641131e34be44c9ecd591262ca7de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Melt1.5.asset using Guid(852641131e34be44c9ecd591262ca7de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f34d2cddbbaf065ca5ad50007174496') in 0.005778 seconds
+  Import took 0.008447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Effects/Melt2.asset
+  artifactKey: Guid(b3867adff0ef5934f997d0c5eb911d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Melt2.asset using Guid(b3867adff0ef5934f997d0c5eb911d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa997d1f459157c0a0aa9667deead7e') in 0.005565 seconds
+  Import took 0.008834 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000681 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.684 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2415.
+Total: 1.623900 ms (FindLiveObjects: 0.162400 ms CreateObjectMapping: 0.056300 ms MarkObjects: 1.393100 ms  DeleteObjects: 0.011400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000651 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.679 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.1 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2419.
+Total: 1.909000 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.053600 ms MarkObjects: 1.687300 ms  DeleteObjects: 0.011500 ms)
+
