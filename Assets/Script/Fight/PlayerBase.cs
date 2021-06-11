@@ -25,4 +25,10 @@ public class PlayerBase : MonoBehaviour
         baseCost -= cost;
         costText.text = baseCost.ToString();
     }
+
+    public void BaseRecoverCost()
+    {
+        baseCost = 8;
+        costText.text = baseCost.ToString();
+    }
 }

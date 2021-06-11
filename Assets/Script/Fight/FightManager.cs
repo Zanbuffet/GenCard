@@ -14,7 +14,7 @@ public class FightManager : MonoBehaviour
         Card_Field.onCardDeath += RemoveFromQueue;
     }
     public void InitFighting()
-    {   
+    {
         fightQueue.Clear();
         foreach (var slot in slots)
         {
@@ -40,12 +40,12 @@ public class FightManager : MonoBehaviour
                 foreach (var tar in targets)
                 {
                     slot.GetComponent<BattleEffects>().Attack();
-                    
+
                     Debug.Log("Card " + card + "Attack " + tar.name + "  Damage: " + card.Attack);
                     Card_Field targetCard = tar.GetComponent<Card_Field>();
                     if (targetCard != null)
                     {
-                        targetCard.TakeDamage(card.element,card.Attack);
+                        targetCard.TakeDamage(card.element, card.Attack);
                     }
                     else
                         BaseAttack(tar, card.Attack);
@@ -92,13 +92,22 @@ public class FightManager : MonoBehaviour
                 //Card card = fightQueue[idx + 1];
                 targets.Add(slots[idx + 1]);
             }
+            else
+            {
+                targets.Add(P2Base);
+            }
+
         }
         else
         {
             if (fightQueue.ContainsKey(idx - 1))
             {
                 //Card card = fightQueue[idx + 1];
-                targets.Add(slots[idx-1]);
+                targets.Add(slots[idx - 1]);
+            }
+            else
+            {
+                targets.Add(P1Base);
             }
         }
         return targets;
@@ -125,7 +134,7 @@ public class FightManager : MonoBehaviour
         InitFighting();
         yield return StartCoroutine(Fighting());
         Debug.Log("FightEnds");
-        foreach(var slot in slots)
+        foreach (var slot in slots)
         {
             slot.GetComponent<BattleEffects>().ResetElements(slot.GetComponent<Card_Field>().idx);
         }

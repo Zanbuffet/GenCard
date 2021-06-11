@@ -115,14 +115,14 @@ public class UIManager : MonoBehaviour
     {
         if(tmp_inventory_1.cur_card!=-1)
         {
-            int tmp=GameObject.Find("P1Base").GetComponent<Base>().baseCost-tmp_inventory_1.cards[tmp_inventory_1.cur_card].cost;
+            int tmp=GameObject.Find("P1Base").GetComponent<PlayerBase>().baseCost-tmp_inventory_1.cards[tmp_inventory_1.cur_card].cost;
             if(tmp>=0){
             // add to field
             battleSlots[slot_idx].GetComponent<Card_Field>().RefreshCard(tmp_inventory_1.cards[tmp_inventory_1.cur_card]);
             // remove from inventory_1
             tmp_inventory_1.cards.RemoveAt(tmp_inventory_1.cur_card);
             Debug.Log("cur_card: "+tmp_inventory_1.cur_card);
-            GameObject.Find("P1Base").GetComponent<Base>().BaseReduceCost(tmp_inventory_1.cards[tmp_inventory_1.cur_card].cost);
+            GameObject.Find("P1Base").GetComponent<PlayerBase>().BaseReduceCost(tmp_inventory_1.cards[tmp_inventory_1.cur_card].cost);
             tmp_inventory_1.cur_card=-1;
             if(GameObject.Find("TurnManager").GetComponent<TurnManager>().cur_turn==false){
                 GameObject.Find("Turner_Player1").GetComponent<Turner1>().isChanged=true;
@@ -136,14 +136,14 @@ public class UIManager : MonoBehaviour
         }
         if(tmp_inventory_2.cur_card!=-1)
         {
-            int tmp=GameObject.Find("P2Base").GetComponent<Base>().baseCost-tmp_inventory_2.cards[tmp_inventory_2.cur_card].cost;
+            int tmp=GameObject.Find("P2Base").GetComponent<PlayerBase>().baseCost-tmp_inventory_2.cards[tmp_inventory_2.cur_card].cost;
             Debug.Log(tmp);
             if(tmp>=0){
             // add to field
             battleSlots[slot_idx].GetComponent<Card_Field>().RefreshCard(tmp_inventory_2.cards[tmp_inventory_2.cur_card]);
             // remove from tmp_inventory_2
             tmp_inventory_2.cards.RemoveAt(tmp_inventory_2.cur_card);
-            GameObject.Find("P2Base").GetComponent<Base>().BaseReduceCost(tmp_inventory_2.cards[tmp_inventory_2.cur_card].cost);
+            GameObject.Find("P2Base").GetComponent<PlayerBase>().BaseReduceCost(tmp_inventory_2.cards[tmp_inventory_2.cur_card].cost);
             tmp_inventory_2.cur_card=-1;
             if(GameObject.Find("TurnManager").GetComponent<TurnManager>().cur_turn==false){
                 GameObject.Find("Turner_Player1").GetComponent<Turner1>().isChanged=true;
