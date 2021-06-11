@@ -39,6 +39,8 @@ public class FightManager : MonoBehaviour
                 GameObject[] targets = GetTargets(slot.GetComponent<Card_Field>().idx).ToArray();
                 foreach (var tar in targets)
                 {
+                    slot.GetComponent<BattleEffects>().Attack();
+                    
                     Debug.Log("Card " + card + "Attack " + tar.name + "  Damage: " + card.Attack);
                     Card_Field targetCard = tar.GetComponent<Card_Field>();
                     if (targetCard != null)

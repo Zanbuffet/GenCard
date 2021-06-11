@@ -11,6 +11,7 @@ public class BattleEffects : MonoBehaviour
     public GameObject[] buffSlots;
     public Sprite[] elementSprites;
     public ElementEffectType[] elementEffects;
+    public new Animation animation;
     private void OnEnable()
     {
         Card_Field.onCardDeath += ResetElements;
@@ -18,10 +19,12 @@ public class BattleEffects : MonoBehaviour
     private void Start()
     {
         damageT = GetComponentInChildren<TextMeshProUGUI>();
+        animation = GetComponent<Animation>();
     }
     public void Attack()
     {
         //scaleup anim
+        animation.Play();
     }
 
     public void DisplayDamage(int damage)
@@ -37,6 +40,7 @@ public class BattleEffects : MonoBehaviour
                 {
                     buff.GetComponent<Image>().color = Color.clear;
                 }
+                damageT.color = Color.black;
             }
             return;
         }
@@ -49,7 +53,7 @@ public class BattleEffects : MonoBehaviour
                 damageT.color = combo.descriptionColor;
             }
         }
-        damageT.text = effectDescription + '\n' + damage.ToString();
+        damageT.text = effectDescription + '\n' + "- " +damage.ToString();
     }
 
 
@@ -99,4 +103,9 @@ public class BattleEffects : MonoBehaviour
         }
     }
 
+
+    public void AttackEffect()
+    {
+        
+    }
 }
