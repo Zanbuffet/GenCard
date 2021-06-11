@@ -123,6 +123,10 @@ public class FightManager : MonoBehaviour
         InitFighting();
         yield return StartCoroutine(Fighting());
         Debug.Log("FightEnds");
+        foreach(var slot in slots)
+        {
+            slot.GetComponent<BattleEffects>().ResetElements(slot.GetComponent<Card_Field>().idx);
+        }
         GameObject.Find("TurnManager").GetComponent<TurnManager>().InitTurn();
     }
 }

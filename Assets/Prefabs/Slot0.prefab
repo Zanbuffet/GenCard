@@ -321,6 +321,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a101133c66c9545a95a34d8ca136d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentElements: 
+  buffSlots:
+  - {fileID: 3566039829795560141}
+  - {fileID: 3012083950668548039}
+  elementSprites:
+  - {fileID: 21300000, guid: 61e166ea9213b094ebacefc3bb27d062, type: 3}
+  - {fileID: 21300000, guid: f5022b2887ab305429edf1fe19200357, type: 3}
+  - {fileID: 21300000, guid: 26d368cafc2d89447bba9e91d33d1b39, type: 3}
+  - {fileID: 0}
+  elementEffects:
+  - {fileID: 11400000, guid: 852641131e34be44c9ecd591262ca7de, type: 2}
+  - {fileID: 11400000, guid: b3867adff0ef5934f997d0c5eb911d05, type: 2}
+  - {fileID: 11400000, guid: 4a9f0b217cfc7144a9b84bc81a598927, type: 2}
+  - {fileID: 11400000, guid: 5998aa3c5a543f541a2f6357de22104f, type: 2}
 --- !u!114 &5911924946671462046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,15 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6872a7893615b45bfe7d71a375d16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentElements: 
-  buffSlots:
-  - {fileID: 3566039829795560141}
-  - {fileID: 3012083950668548039}
-  elementSprites:
-  - {fileID: 21300000, guid: 61e166ea9213b094ebacefc3bb27d062, type: 3}
-  - {fileID: 21300000, guid: f5022b2887ab305429edf1fe19200357, type: 3}
-  - {fileID: 21300000, guid: 26d368cafc2d89447bba9e91d33d1b39, type: 3}
-  - {fileID: 0}
 --- !u!1 &2644538747460451102
 GameObject:
   m_ObjectHideFlags: 0

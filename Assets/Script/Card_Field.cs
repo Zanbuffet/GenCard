@@ -9,8 +9,8 @@ public class Card_Field : MonoBehaviour
     public static CardDeath onCardDeath;
     public Card cardinfo;
     public int idx;
-    private BattleEffects battleEffects;
-    private ElementEffect elementEffect;
+    private BattleEffects battleEffect;
+
     private int currentHP;
 
     private void OnEnable()
@@ -19,8 +19,7 @@ public class Card_Field : MonoBehaviour
     }
     private void Start()
     {
-        battleEffects = GetComponent<BattleEffects>();
-        elementEffect = GetComponent<ElementEffect>();
+        battleEffect = GetComponent<BattleEffects>();
     }
 
 
@@ -32,19 +31,18 @@ public class Card_Field : MonoBehaviour
         transform.Find("HP").GetComponent<Text>().text = "" + currentHP;
         transform.Find("Attack").GetComponent<Text>().text = "" + cardinfo.Attack;
         transform.Find("Image").GetComponent<Image>().sprite = cardinfo.icon_field;
-
-
     }
 
     public void TakeDamage(Element elementType, int damage)
     {
-        elementEffect.AddElement(elementType);
-        currentHP -= damage;
+        battleEffect.AddElement(elementType);
+        int additionalDamage = battleEffect.ElementDamage(damage);
+        currentHP -= additionalDamage;
         UpdateCard();
         //if (currentHP <= 0 && onCardDeath != null)
         //onCardDeath.Invoke();
 
-        StartCoroutine(TakingDamage(damage));
+        StartCoroutine(TakingDamage(additionalDamage));
     }
 
 
@@ -52,9 +50,9 @@ public class Card_Field : MonoBehaviour
     IEnumerator TakingDamage(int damage)
     {
         GetComponent<Image>().color = Color.red;
-        battleEffects.DisplayDamage(damage);
+        battleEffect.DisplayDamage(damage);
         yield return new WaitForSeconds(1f);
-        battleEffects.DisplayDamage(0);
+        battleEffect.DisplayDamage(0);
         GetComponent<Image>().color = Color.white;
         if (currentHP <= 0 && onCardDeath != null)
             onCardDeath(idx);

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Melt x 1.5
   elementCombo: 0000000002000000
+  damage: 1.5
   description: Melt x 1.5
-  descriptionColor: {r: 0.8301887, g: 0.1461967, b: 0.1461967, a: 0}
+  descriptionColor: {r: 0.8301887, g: 0.1461967, b: 0.1461967, a: 1}

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Vaoirze x 1.5
   elementCombo: 0000000001000000
+  damage: 1.5
   description: Vaoirze x 1.5
-  descriptionColor: {r: 0.7075472, g: 0.3324541, b: 0.19134918, a: 0}
+  descriptionColor: {r: 0.7075472, g: 0.3324541, b: 0.19134918, a: 1}
