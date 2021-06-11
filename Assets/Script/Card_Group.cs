@@ -14,6 +14,7 @@ public class Card_Group : MonoBehaviour
         transform.Find("Container").Find("HP").GetComponent<Text>().text=""+cardinfo.HP;
         transform.Find("Container").Find("cost").GetComponent<Text>().text=""+cardinfo.cost;
         transform.Find("Container").Find("Image").GetComponent<Image>().sprite=cardinfo.icon_deck;
+        transform.Find("Container").Find("Attack").GetComponent<Text>().text=""+cardinfo.Attack;
     }
 
     public void OnSelect(){
